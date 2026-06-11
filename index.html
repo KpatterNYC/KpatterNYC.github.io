@@ -380,6 +380,35 @@
 
     .video-placeholder p { font-size: 0.85rem; letter-spacing: 0.05em; }
 
+    /* NARRATIVE */
+    #narrative { border-top: 1px solid var(--light); }
+    .narrative-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .narrative-content h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .narrative-content h3:first-child { margin-top: 0; }
+    .narrative-content p {
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+    }
+    .narrative-content ul {
+      margin-bottom: 1.2rem;
+      padding-left: 1.5rem;
+      color: var(--muted);
+    }
+    .narrative-content li { margin-bottom: 0.5rem; }
+
     /* CONTACT */
     #contact { border-top: 1px solid var(--light); text-align: center; }
     #contact p { color: var(--muted); max-width: 480px; margin: 0 auto 2rem; }
@@ -457,6 +486,9 @@
     <a href="#" class="nav-logo">Katrina Patterson</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#artifacts">Artifacts</a></li>
+      <li><a href="#code-review">Code Review</a></li>
+      <li><a href="#narrative">Narrative</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -498,6 +530,109 @@
     </div>
   </div>
   <div class="gradient-bar"></div>
+
+  <section id="about">
+    <p class="section-label">Background</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I have been enrolled in the Computer Science program at Southern New Hampshire University for 1 year. Throughout this time, I have progressively built my technical foundation by completing core and concentration courses that span software development, data structures, databases, and secure coding practices.</p>
+        <p>My career goal is to work as a Secure Software Engineer or in a cybersecurity-focused development role. Employers in this space value developers who can think like attackers while building defensible systems, and this ePortfolio serves as tangible, code-level evidence of that ability.</p>
+      </div>
+      <div class="skills-list">
+        <div class="skill-item"><span>Python &middot; Dash Framework</span> <span class="skill-tag">Backend</span></div>
+        <div class="skill-item"><span>MongoDB &middot; NoSQL</span> <span class="skill-tag">Database</span></div>
+        <div class="skill-item"><span>Object-Oriented Programming (OOP)</span> <span class="skill-tag">Core</span></div>
+        <div class="skill-item"><span>Data Structures &amp; Algorithms</span> <span class="skill-tag">Core</span></div>
+        <div class="skill-item"><span>Secure Software Engineering</span> <span class="skill-tag">Security</span></div>
+        <div class="skill-item"><span>Role-Based Access Control (RBAC)</span> <span class="skill-tag">Security</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifacts">
+    <div class="blob-a"></div>
+    <div class="blob-b"></div>
+    <div class="inner">
+      <p class="section-label">CS 340 Animal Shelter CRUD</p>
+      <h2 class="section-title">Project Enhancements</h2>
+      <div class="artifacts-grid">
+        
+        <a href="https://github.com/KpatterNYC/CS-340" target="_blank" style="text-decoration:none;">
+          <div class="artifact-card">
+            <div class="artifact-number">01</div>
+            <div class="artifact-category">Software Design</div>
+            <h3 class="artifact-title">Security Hardening</h3>
+            <p class="artifact-desc">Added authentication via hashed credentials (bcrypt), comprehensive input validation to prevent injection, and data encryption at rest to meet professional security standards.</p>
+            <div class="artifact-status">View on GitHub &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/KpatterNYC/CS-340" target="_blank" style="text-decoration:none;">
+          <div class="artifact-card">
+            <div class="artifact-number">02</div>
+            <div class="artifact-category">Algorithms &amp; Data Structures</div>
+            <h3 class="artifact-title">Query Optimization</h3>
+            <p class="artifact-desc">Replaced unindexed O(n) collection scans with MongoDB B-Tree indexing on animal_type, breed, and outcome_type fields. Implemented an in-memory hash map (Python dictionary) caching layer to serve repeated queries in O(1) time, with automatic cache invalidation on all write operations.</p>
+            <div class="artifact-status">Milestone Three &mdash; Submitted &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/KpatterNYC/CS-340" target="_blank" style="text-decoration:none;">
+          <div class="artifact-card">
+            <div class="artifact-number">03</div>
+            <div class="artifact-category">Databases</div>
+            <h3 class="artifact-title">Access Control &amp; Auditing</h3>
+            <p class="artifact-desc">Hardened the database architecture by establishing Role-Based Access Control (RBAC) to enforce the principle of least privilege. Engineered an automated audit logging system that records forensic data (timestamps, user roles, actions) to a dedicated MongoDB collection for every destructive operation.</p>
+            <div class="artifact-status">Milestone Four &mdash; Submitted &rarr;</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="code-review">
+    <p class="section-label">Technical Walkthrough</p>
+    <h2 class="section-title">Code Review</h2>
+    <p style="margin-bottom: 2rem; color: var(--muted); max-width: 600px;">
+      This code review identifies weaknesses in the original CS 340 artifact (lack of authentication, unoptimized queries, absent access controls) and articulates the clear enhancement roadmap implemented above.
+    </p>
+    <div class="video-placeholder">
+      <div class="play-icon">&#9654;</div>
+      <p>Video Embed Placeholder &mdash; Swap with YouTube/Loom URL</p>
+    </div>
+  </section>
+
+  <section id="narrative">
+    <p class="section-label">CS 499 Milestone Two</p>
+    <h2 class="section-title">Enhancement Narrative</h2>
+    <div class="narrative-content">
+      <h3>Artifact Description</h3>
+      <p>
+        The artifact selected for this category is the Animal Shelter CRUD application originally developed in CS 340: Advanced Programming Concepts. It is a Python-based web dashboard built with the Dash framework that interfaces with a MongoDB database to perform create, read, update, and delete operations on animal shelter data for the fictional client Grazioso Salvare.
+      </p>
+
+      <h3>Justification &amp; Improvements</h3>
+      <p>
+        While functional, the original artifact lacked any authentication, input validation, or data protection mechanisms. I selected it to demonstrate my ability to take a prototype and elevate it to production-grade security standards.
+      </p>
+      <p>
+        The software engineering enhancement focused on adding security hardening to the application layer. This included implementing user authentication via hashed credentials (bcrypt), input validation on all user-supplied fields to prevent injection attacks, and encrypting sensitive data fields at rest. These enhancements showcase my skills in secure software design, defensive programming, and the application of cryptographic principles.
+      </p>
+
+      <h3>Course Outcomes Alignment</h3>
+      <p>
+        Through this enhancement, I successfully met the planned course outcomes by demonstrating the ability to use well-founded techniques in computing practices. By implementing proactive security measures against injection and authentication bypass attacks, I illustrated substantial progress toward developing a security mindset that anticipates adversarial exploits and mitigates design flaws.
+      </p>
+
+      <h3>Reflection &amp; Challenges</h3>
+      <p>
+        The process of enhancing this artifact reinforced the critical importance of a defense-in-depth approach. One of the primary challenges was configuring the bcrypt library in Python and ensuring that password hashing integrated smoothly with the existing Dash callbacks without breaking the user experience. By resolving these issues, I deepened my practical understanding of integrating robust security mechanisms into existing codebases, directly aligning with my career goals as a secure software engineer.
+      </p>
+    </div>
+  </section>
+
   <section id="contact">
     <p class="section-label">Get In Touch</p>
     <h2 class="section-title">Contact</h2>
