@@ -485,10 +485,10 @@
   <nav>
     <a href="#" class="nav-logo">Katrina Patterson</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#self-assessment">Assessment</a></li>
       <li><a href="#artifacts">Artifacts</a></li>
       <li><a href="#code-review">Code Review</a></li>
-      <li><a href="#narrative">Narrative</a></li>
+      <li><a href="#narratives">Narratives</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -531,22 +531,21 @@
   </div>
   <div class="gradient-bar"></div>
 
-  <section id="about">
-    <p class="section-label">Background</p>
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>I have been enrolled in the Computer Science program at Southern New Hampshire University for 1 year. Throughout this time, I have progressively built my technical foundation by completing core and concentration courses that span software development, data structures, databases, and secure coding practices.</p>
-        <p>My career goal is to work as a Secure Software Engineer or in a cybersecurity-focused development role. Employers in this space value developers who can think like attackers while building defensible systems, and this ePortfolio serves as tangible, code-level evidence of that ability.</p>
-      </div>
-      <div class="skills-list">
-        <div class="skill-item"><span>Python &middot; Dash Framework</span> <span class="skill-tag">Backend</span></div>
-        <div class="skill-item"><span>MongoDB &middot; NoSQL</span> <span class="skill-tag">Database</span></div>
-        <div class="skill-item"><span>Object-Oriented Programming (OOP)</span> <span class="skill-tag">Core</span></div>
-        <div class="skill-item"><span>Data Structures &amp; Algorithms</span> <span class="skill-tag">Core</span></div>
-        <div class="skill-item"><span>Secure Software Engineering</span> <span class="skill-tag">Security</span></div>
-        <div class="skill-item"><span>Role-Based Access Control (RBAC)</span> <span class="skill-tag">Security</span></div>
-      </div>
+  <section id="self-assessment">
+    <p class="section-label">Introduction</p>
+    <h2 class="section-title">Professional Self-Assessment</h2>
+    <div class="narrative-content" style="max-width: 1000px; line-height: 1.8;">
+      <p>Reflecting on my journey through the Computer Science program at Southern New Hampshire University, I can confidently say that my perspective has matured from simply wanting to write functional code to aspiring to architect secure, scalable, and defensible systems. Completing my coursework and developing this ePortfolio has served as the ultimate capstone to this transformation. It has forced me to synthesize disconnected concepts, such as algorithms, databases, and secure coding, into a cohesive, professional narrative that tangibly showcases my strengths. This portfolio serves not just as an academic requirement, but as a formal demonstration of my readiness to enter the industry as a Secure Software Engineer.</p>
+      <br>
+      <p>Throughout this program, my professional goals and values have been deeply shaped by the understanding that security and collaboration are not afterthoughts, but foundational elements of software development. I have honed my ability to collaborate in team environments and communicate effectively with diverse stakeholders. For example, during group projects in the Software Development Lifecycle course, I learned how to translate technical constraints into business risks for non-technical stakeholders, ensuring that our project timelines remained realistic while prioritizing critical security features. I recognize that a successful engineer must be able to listen to client needs, adapt to shifting requirements, and document code clearly so that future developers can inherit the system seamlessly.</p>
+      <br>
+      <p>My technical foundation spans across multiple critical domains. In the realm of data structures and algorithms, I have learned how to analyze time complexity and select the appropriate structures to optimize performance, a skill I demonstrated in my earlier coursework and further refined in this capstone by migrating O(n) search operations to O(log n) using B-Tree indexing. Within software engineering and databases, courses like Object-Oriented Analysis and Design and Advanced Programming Concepts taught me how to design modular, maintainable architectures and interface them securely with backend data stores.</p>
+      <br>
+      <p>Perhaps most importantly, my coursework in Secure Coding and Reverse Software Engineering cemented my specialization in cybersecurity. I have developed a security mindset that inherently anticipates adversarial exploits. Whether it is preventing SQL or NoSQL injections, configuring role-based access control, or ensuring encryption at rest, my default approach to development is to assume a hostile environment and build accordingly.</p>
+      <br>
+      <p>The artifacts presented in this ePortfolio were carefully chosen to holistically demonstrate this exact mindset. I selected a single, continuous artifact, a Python and MongoDB CRUD application, and enhanced it across three distinct categories: Software Design and Engineering, Algorithms and Data Structures, and Databases. Instead of presenting three disjointed projects, this approach illustrates my ability to take a functional prototype and systematically harden it into a production-grade system.</p>
+      <br>
+      <p>The software design enhancements prove my ability to implement application-level security, including bcrypt and input validation. The algorithm enhancements prove my ability to optimize data retrieval at scale through caching and indexing. Finally, the database enhancements prove my capability to enforce data integrity and forensic accountability using role-based access control and automated audit logging. Together, these artifacts do not just show that I can code; they prove that I can engineer systems that are efficient, maintainable, and relentlessly secure.</p>
     </div>
   </section>
 
@@ -574,7 +573,7 @@
             <div class="artifact-category">Algorithms &amp; Data Structures</div>
             <h3 class="artifact-title">Query Optimization</h3>
             <p class="artifact-desc">Replaced unindexed O(n) collection scans with MongoDB B-Tree indexing on animal_type, breed, and outcome_type fields. Implemented an in-memory hash map (Python dictionary) caching layer to serve repeated queries in O(1) time, with automatic cache invalidation on all write operations.</p>
-            <div class="artifact-status">Milestone Three &mdash; Submitted &rarr;</div>
+            <div class="artifact-status">View on GitHub &rarr;</div>
           </div>
         </a>
 
@@ -584,7 +583,7 @@
             <div class="artifact-category">Databases</div>
             <h3 class="artifact-title">Access Control &amp; Auditing</h3>
             <p class="artifact-desc">Hardened the database architecture by establishing Role-Based Access Control (RBAC) to enforce the principle of least privilege. Engineered an automated audit logging system that records forensic data (timestamps, user roles, actions) to a dedicated MongoDB collection for every destructive operation.</p>
-            <div class="artifact-status">Milestone Four &mdash; Submitted &rarr;</div>
+            <div class="artifact-status">View on GitHub &rarr;</div>
           </div>
         </a>
 
@@ -598,38 +597,77 @@
     <p style="margin-bottom: 2rem; color: var(--muted); max-width: 600px;">
       This code review identifies weaknesses in the original CS 340 artifact (lack of authentication, unoptimized queries, absent access controls) and articulates the clear enhancement roadmap implemented above.
     </p>
-    <div class="video-placeholder">
-      <div class="play-icon">&#9654;</div>
-      <p>Video Embed Placeholder &mdash; Swap with YouTube/Loom URL</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <div style="background: white; border: 1px solid var(--light); border-radius: 8px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(37,99,235,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.03)';">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">🔍</div>
+        <h3 style="font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--ink);">1. Existing Functionality</h3>
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">The original CS 340 artifact is a Python-based CRUD module using the Dash framework to interface with a MongoDB database. It provides basic operations (Create, Read, Update, Delete) to manage animal shelter data, serving as a functional backend prototype for a web dashboard.</p>
+      </div>
+
+      <div style="background: white; border: 1px solid var(--light); border-radius: 8px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(37,99,235,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.03)';">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">⚠️</div>
+        <h3 style="font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--ink);">2. Code Analysis</h3>
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">A review of the original codebase revealed significant architectural weaknesses. There was no user authentication or input validation, leaving it vulnerable to injection. Database queries executed unindexed O(n) collection scans, and there was a complete absence of access controls, meaning any user could execute destructive commands.</p>
+      </div>
+
+      <div style="background: white; border: 1px solid var(--light); border-radius: 8px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(233,30,140,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.03)';">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
+        <h3 style="font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--ink);">3. Planned Enhancements</h3>
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">To address these flaws, the roadmap focused on three categories: <strong>Software Engineering</strong> (implementing bcrypt authentication and strict input validation), <strong>Algorithms</strong> (engineering O(log n) B-Tree indexing and constant-time O(1) caching), and <strong>Databases</strong> (establishing role-based access control and automated forensic audit logging).</p>
+      </div>
     </div>
   </section>
 
-  <section id="narrative">
-    <p class="section-label">CS 499 Milestone Two</p>
-    <h2 class="section-title">Enhancement Narrative</h2>
+  <section id="narratives">
+    <p class="section-label">Artifact Reflections</p>
+    <h2 class="section-title">Enhancement Narratives</h2>
+    
+    <div class="narrative-content" style="margin-bottom: 3rem;">
+      <h3 style="color: var(--pink); border-bottom: 1px solid var(--light); padding-bottom: 0.5rem; font-size: 1.2rem;">Enhancement One: Software Design &amp; Engineering</h3>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Artifact Description</h4>
+      <p>The artifact selected for this category is the Animal Shelter CRUD application originally developed in CS 340: Advanced Programming Concepts. It is a Python-based web dashboard built with the Dash framework that interfaces with a MongoDB database to perform create, read, update, and delete operations on animal shelter data for the fictional client Grazioso Salvare.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Justification &amp; Improvements</h4>
+      <p>While functional, the original artifact lacked any authentication, input validation, or data protection mechanisms. I selected it to demonstrate my ability to take a prototype and elevate it to production-grade security standards.</p>
+      <p>The software engineering enhancement focused on adding security hardening to the application layer. This included implementing user authentication via hashed credentials (bcrypt), input validation on all user-supplied fields to prevent injection attacks, and encrypting sensitive data fields at rest. These enhancements showcase my skills in secure software design, defensive programming, and the application of cryptographic principles.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Course Outcomes Alignment</h4>
+      <p>Through this enhancement, I successfully met the planned course outcomes by demonstrating the ability to use well-founded techniques in computing practices. By implementing proactive security measures against injection and authentication bypass attacks, I illustrated substantial progress toward developing a security mindset that anticipates adversarial exploits and mitigates design flaws.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Reflection &amp; Challenges</h4>
+      <p>The process of enhancing this artifact reinforced the critical importance of a defense-in-depth approach. One of the primary challenges was configuring the bcrypt library in Python and ensuring that password hashing integrated smoothly with the existing Dash callbacks without breaking the user experience. By resolving these issues, I deepened my practical understanding of integrating robust security mechanisms into existing codebases, directly aligning with my career goals as a secure software engineer.</p>
+    </div>
+
+    <div class="narrative-content" style="margin-bottom: 3rem;">
+      <h3 style="color: var(--pink); border-bottom: 1px solid var(--light); padding-bottom: 0.5rem; font-size: 1.2rem;">Enhancement Two: Algorithms &amp; Data Structures</h3>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Artifact Description</h4>
+      <p>The artifact selected for this enhancement is the same Animal Shelter CRUD application. The underlying Python module handles all interactions with the MongoDB database. This artifact served as a functional prototype but suffered from severe algorithmic inefficiencies.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Justification &amp; Improvements</h4>
+      <p>I selected this artifact for the Algorithms category because it presented a clear, measurable performance problem that could be solved through direct algorithmic engineering. In its original state, every read operation executed a full MongoDB collection scan, resulting in an O(n) time complexity problem that would render the dashboard unusable at scale.</p>
+      <p>I engineered a MongoDB indexing strategy by explicitly calling `create_index()` for frequently queried fields (animal type, breed, outcome type). This allows MongoDB to utilize a B-Tree data structure, reducing search time to O(log n). Secondly, I implemented an in-memory caching layer using a Python hash map (dictionary). The `read()` method now serializes queries into JSON string keys, providing O(1) constant-time retrieval for cached queries. Finally, I implemented cache invalidation logic to clear the cache during any write operations, ensuring data integrity.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Course Outcomes Alignment</h4>
+      <p>I demonstrated the ability to design computing solutions that solve a problem using algorithmic principles, while managing the trade-offs involved in design choices. I analyzed a performance bottleneck, selected a B-Tree index for search efficiency and a hash map for constant-time retrieval, and carefully navigated the trade-off of cache invalidation overhead versus read speed optimization.</p>
+
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Reflection &amp; Challenges</h4>
+      <p>A major challenge was designing a consistent cache key, since MongoDB query objects are dictionaries and not directly hashable. I resolved this by serializing the query to a JSON string with sorted keys, which produces a deterministic string for any query. This enhancement reinforced that algorithmic thinking is deeply embedded in everyday software engineering decisions, turning theoretical time complexity concepts into actionable performance fixes.</p>
+    </div>
+
     <div class="narrative-content">
-      <h3>Artifact Description</h3>
-      <p>
-        The artifact selected for this category is the Animal Shelter CRUD application originally developed in CS 340: Advanced Programming Concepts. It is a Python-based web dashboard built with the Dash framework that interfaces with a MongoDB database to perform create, read, update, and delete operations on animal shelter data for the fictional client Grazioso Salvare.
-      </p>
+      <h3 style="color: var(--pink); border-bottom: 1px solid var(--light); padding-bottom: 0.5rem; font-size: 1.2rem;">Enhancement Three: Databases</h3>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Artifact Description</h4>
+      <p>This final enhancement targets the database layer of the Animal Shelter CRUD application. The module interacts directly with MongoDB to power the frontend visualization tools.</p>
 
-      <h3>Justification &amp; Improvements</h3>
-      <p>
-        While functional, the original artifact lacked any authentication, input validation, or data protection mechanisms. I selected it to demonstrate my ability to take a prototype and elevate it to production-grade security standards.
-      </p>
-      <p>
-        The software engineering enhancement focused on adding security hardening to the application layer. This included implementing user authentication via hashed credentials (bcrypt), input validation on all user-supplied fields to prevent injection attacks, and encrypting sensitive data fields at rest. These enhancements showcase my skills in secure software design, defensive programming, and the application of cryptographic principles.
-      </p>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Justification &amp; Improvements</h4>
+      <p>In its original implementation, the application utilized a single MongoDB connection string with broad, unrestricted read/write permissions. Any user had full administrative power, and there was absolutely no accountability mechanism. To transform this into a production-grade system, I implemented Role-Based Access Control (RBAC) and automated Audit Logging.</p>
+      <p>I created an authentication layer that dynamically maps users to 'admin', 'staff', or 'viewer' roles, enforcing the principle of least privilege across all operations (e.g., restricting 'delete' entirely to admins). Secondly, I engineered a `_log_action()` method that automatically inserts a forensic record into a dedicated 'audit_log' MongoDB collection whenever a destructive action occurs, capturing the timestamp, user role, action, and affected document.</p>
 
-      <h3>Course Outcomes Alignment</h3>
-      <p>
-        Through this enhancement, I successfully met the planned course outcomes by demonstrating the ability to use well-founded techniques in computing practices. By implementing proactive security measures against injection and authentication bypass attacks, I illustrated substantial progress toward developing a security mindset that anticipates adversarial exploits and mitigates design flaws.
-      </p>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Course Outcomes Alignment</h4>
+      <p>This directly satisfied the outcome of developing a security mindset that anticipates adversarial exploits and ensures privacy and enhanced security of data. Furthermore, structuring database permissions around organizational roles (admin, staff, viewer) demonstrated the ability to employ strategies for building collaborative environments that support organizational decision-making safely.</p>
 
-      <h3>Reflection &amp; Challenges</h3>
-      <p>
-        The process of enhancing this artifact reinforced the critical importance of a defense-in-depth approach. One of the primary challenges was configuring the bcrypt library in Python and ensuring that password hashing integrated smoothly with the existing Dash callbacks without breaking the user experience. By resolving these issues, I deepened my practical understanding of integrating robust security mechanisms into existing codebases, directly aligning with my career goals as a secure software engineer.
-      </p>
+      <h4 style="margin-top:1.5rem; margin-bottom:0.5rem;">Reflection &amp; Challenges</h4>
+      <p>A significant challenge was engineering the audit log so it could not be bypassed. I deliberately implemented the logging logic deeply within the core Python CRUD module rather than the frontend, ensuring that no matter what interface calls the database, the forensic trail is always generated. This process profoundly deepened my understanding of defense-in-depth database architecture.</p>
     </div>
   </section>
 
